@@ -114,6 +114,158 @@ echo '2' === 2;
 // a < b - дали вредноста на a е помала од вредноста на b
 echo 2 < 1;
 
+// a > b - дали вредноста на а е поголема од вредноста на b
+echo 3 > 2;
+
+// a >= b - дали вредноста на а е поголема или еднаква со вредноста на b
+echo 4 >= 4;
+
+// a <= b - дали вредноста на а е помала или еднаква со вредноста на b
+echo 6 <= 4;
+
+
+$q = 5 > 2;
+
+if($q) {
+    echo "5 e поголемо од 2";
+} else {
+    echo "5 не е поголемо од 2";
+}
+
+$q = 10 <= 2;
+
+if(!$q){ // ! јаменува вредноста true -> false / false -> true
+    echo "Вистина...";
+}
+
+// и и или оператори
+// && = и
+// || = или
+
+// true && true = true
+// true && false = false
+// false && false = false
+// false && true = false
+
+// true || true = true
+// true || false = true
+// false || false = false
+// false || true = true
+
+$q = !(true || false) && (false || !true && (true || true));
+
+$q = 10 < 5 || ('2' == 2 && (!(4 >=8 || 55*2 < 150) && 10 === 10));
+
+$q = false || (true && (!(false || true) && true));
+
+$q = false || (true && (!(true) && true));
+
+$q = false || (true && (false && true));
+
+$q = false || (true && false);
+
+$q = false || false;
+
+$q = false;
+
+$ime = 'pero';
+
+if($ime == 'pero'){
+    echo "Перо";
+} else if ($ime == 'persa') {
+    echo 'Перса';
+} else {
+    echo 'Непознато име';
+}
+
+switch($ime){
+    case 'pero':
+        echo 'Pero';
+        break;
+    case 'persa':
+        echo 'Persa';
+        break;
+    default:
+        echo 'Nepoznato ime';
+}
+
+function broiDoSto() { // "broiDoSto()" -> function signature
+    // function body
+}
+
+function broiDo($a) {
+    echo "Избројав до $a";
+}
+
+broiDo('lubenica');
+// функции кои не враќаат податоци се викаат void функции
+
+
+function sobiranje($d, $f) {
+    return $d + $f; // не ја печати вредноста, туку ја враќа
+}
+
+$g = sobiranje(3, 10); // $g ја добива вредноста која функцијата sobiranje ја враќа
+
+function mat($a, $b){
+    $r = $a + $b;
+    if($r % 2 == 0){
+        return $r;
+    } else {
+        return $r / 2;
+    }
+}
+
+echo mat(4, 10);
+echo mat(3, 8);
+
+
+$niza = ['a', 'b', 'c'];
+// echo $niza;
+// print_r($niza);
+// var_dump($niza);
+echo $niza[0];
+echo $niza[1];
+echo $niza[2];
+// echo $niza[3];
+array_push($niza, 'd');
+print_r($niza);
+echo count($niza);
+
+echo "<ul>";
+for($i = 0; $i < 10; $i++) {
+    echo "<li> $i </li>";
+}
+echo "</ul>";
+
+echo "<ol>";
+for($i = 0; $i < count($niza); $i++){
+    echo "<li> ".$niza[$i]." </li>";
+}
+echo "</ol>";
+
+// асоцијативни низи
+
+$student = ["Pero", "Perovski"]; // нумерирана низа
+$student = ["ime" => "Pero", "prezime" => "Perovski"]; // асоцијативна низа
+
+echo $student["ime"];
+echo $student["prezime"];
+
+$studenti = [
+    ['ime' => 'Pero', 'prezime' => 'Perovski'],
+    ['ime' => 'Janko', 'prezime' => 'Jankovski'],
+    ['ime' => 'Stanko', 'prezime' => 'Stankovski'],
+    ['ime' => 'Petko', 'prezime' => 'Petkovski']
+];
+
+echo $studenti[0]['prezime'];
+
+for($i = 0; $i < count($studenti); $i++){
+    echo '<hr/>'.$studenti[$i]['prezime'];
+}
+
+
 ?>
 
 
