@@ -254,9 +254,11 @@ echo $student["prezime"];
 
 $studenti = [
     ['ime' => 'Pero', 'prezime' => 'Perovski'],
-    ['ime' => 'Janko', 'prezime' => 'Jankovski'],
+    ['ime' => 'Aleksandar', 'prezime' => 'Aleksandrovski'],
     ['ime' => 'Stanko', 'prezime' => 'Stankovski'],
-    ['ime' => 'Petko', 'prezime' => 'Petkovski']
+    ['ime' => 'Petko', 'prezime' => 'Petkovski'],
+    ['ime' => 'Ana', 'prezime' => 'Aneska'],
+    ['ime' => 'Janko', 'prezime' => 'Jankovski']
 ];
 
 echo $studenti[0]['prezime'];
