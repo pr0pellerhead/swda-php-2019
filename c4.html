@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="c4.php">
+        <input type="text" name="ime"/>
+        <br/>
+        <input type="text" name="prezime"/>
+        <br/>
+        <!--  -->
+        <input type="checkbox" name="vistina"> вистина?
+        <br/>
+        <!--  -->
+        <input type="checkbox" name="hrana[]" value="pizza"> пица 
+        <br/>
+        <input type="checkbox" name="hrana[]" value="burger"> бургер
+        <br/>
+        <input type="checkbox" name="hrana[]" value="burek"> бурек
+        <br/>
+        <!--  -->
+        <input type="radio" name="sex" value="m"> Male
+        <br/>
+        <input type="radio" name="sex" value="f"> Female
+        <br/>
+        <input type="radio" name="sex" value="nb"> Non binary
+        <br/>
+        <button type="submit">Испрати</button>
+    </form>
+</body>
+</html>

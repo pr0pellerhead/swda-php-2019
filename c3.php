@@ -139,8 +139,37 @@ fclose($fh);
 - зборови >7
 
 fopen, fread, fclose, filesize, explode
-
-
-
 */
+
+$fh = fopen('text.txt', 'r');
+$text = fread($fh, filesize('text.txt'));
+fclose($fh);
+
+$broj_na_karakteri = strlen($text);
+$broj_na_zborovi = count(explode(' ', $text));
+$broj_na_recenici = count(explode('. ', $text));
+
+$mali = 0;
+$sredni = 0;
+$golemi = 0;
+
+$zborovi = explode(' ', $text);
+
+foreach($zborovi as $zbor){
+    $d = strlen($zbor);
+    if($d < 4){
+        $mali++;
+    } else if($d >= 4 && $d <= 7) {
+        $sredni++;
+    } else {
+        $golemi++;
+    }
+}
+
+echo "<p>Број на карактери: $broj_na_karakteri</p>";
+echo "<p>Број на зборови: $broj_na_zborovi</p>";
+echo "<p>Број на реченици: $broj_na_recenici</p>";
+echo "<p>Зборови < 4: $mali</p>";
+echo "<p>Зборови >= 4 && <= 7: $sredni</p>";
+echo "<p>Зборови > 7: $golemi</p>";
 ?>
