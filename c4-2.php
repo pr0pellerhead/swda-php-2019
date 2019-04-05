@@ -2,7 +2,7 @@
 
 print_r($_FILES['document']);
 $MAX_FILESIZE = 10240;
-$FILETYPES_ALLOWED = ['image/jpeg', 'image/gif', 'image/png'];
+$FILETYPES_ALLOWED = ['image/jpeg', 'image/gif', 'image/png', 'text/plain'];
 
 if($_FILES['document']['size'] > $MAX_FILESIZE){
     echo "Фајлот е преголем...";
