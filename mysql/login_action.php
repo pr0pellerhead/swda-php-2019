@@ -24,12 +24,12 @@ if(
         header('location: admin.php');
     } else {
         // echo 'bad username or password';
-        header('location: login.php?err=2');
+        header('location: login.php?err=2'); // $_GET['err'] = 2
     }
 
 } else {
     // echo 'fields missing';
-    header('location: login.php?err=1');
+    header('location: login.php?err=1'); // $_GET['err'] = 1
 }
 
 ?>

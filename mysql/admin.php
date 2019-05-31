@@ -9,7 +9,8 @@ if(isset($_SESSION['email'])) {
     echo $_SESSION['full_name'];
 } else {
     // echo 'restricted area!';
-    header('location: login.php?err=3');
+    header('location: login.php?err=3'); // $_GET['err'] = 3
 }
 
 ?>
+
